@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ | FutureVisionMachines</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Custom Styles */
+        :root {
+            --primary-color: #4f46e5;
+            --secondary-color: #8b5cf6;
+            --dark-bg: #111827;
+            --light-bg: #1f2937;
+            --text-light: #e5e7eb;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+        }
+
+        .btn-primary {
+            @apply bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-bold px-6 py-3 rounded-lg shadow-lg hover:scale-105 transition-all duration-300;
+        }
+
+        .nav-link {
+            @apply text-gray-300 hover:text-white transition duration-300;
+        }
+
+        .faq-question {
+            @apply cursor-pointer bg-gray-800 p-5 rounded-lg shadow-md flex justify-between items-center hover:bg-indigo-600 transition-all duration-300;
+        }
+
+        .faq-answer {
+            @apply text-gray-300 overflow-hidden transition-all duration-500 ease-in-out;
+            max-height: 0;
+            opacity: 0;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px; /* Adjust for longer content */
+            opacity: 1;
+            padding-top: 10px;
+        }
+
+        .faq-item.active .icon {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full bg-opacity-90 backdrop-blur-md bg-black shadow-lg py-4 px-8 flex justify-between items-center z-50">
+        <a href="index.html" class="text-2xl font-bold text-white hover:text-secondary transition">FutureVisionMachines</a>
+        <div class="space-x-6 hidden md:flex">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="testimonials.html" class="nav-link">Testimonials</a>
+            <a href="careers.html" class="nav-link">Careers</a>
+            <a href="pricing.html" class="nav-link">Pricing</a>
+            <a href="faq.html" class="nav-link text-indigo-400 font-semibold">FAQ</a>
+            <a href="contact.html" class="btn-primary">Contact Us</a>
+        </div>
+        <button class="md:hidden text-white text-2xl">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative flex flex-col items-center text-center py-40 px-6">
+        <div class="absolute inset-0 bg-gradient-to-r from-indigo-500 via-purple-600 to-blue-500 opacity-20"></div>
+        <h1 class="text-6xl font-extrabold text-white drop-shadow-lg leading-tight">
+            Frequently Asked <span class="text-indigo-400">Questions</span>
+        </h1>
+        <p class="text-lg text-gray-300 mt-4 max-w-xl">Find answers to common questions about our services, pricing, and more.</p>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 px-6 max-w-4xl mx-auto">
+        <h2 class="text-4xl font-bold text-white text-center mb-12">Your Questions, Answered</h2>
+
+        <!-- FAQ Item 1 -->
+        <div class="faq-item mt-12 bg-light-bg p-4 rounded-lg mb-4 shadow-lg">
+            <div class="faq-question" tabindex="0">
+                <h3 class="text-lg font-semibold">What services does FutureVisionMachines offer?</h3>
+                <i class="fas fa-chevron-down icon text-indigo-400 transition-transform duration-300"></i>
+            </div>
+            <p class="faq-answer">We offer SaaS development, web & mobile app development, DevOps solutions, and cloud consulting tailored to your business needs.</p>
+        </div>
+
+        <!-- FAQ Item 2 -->
+        <div class="faq-item mt-12 bg-light-bg p-4 rounded-lg mb-4 shadow-lg">
+            <div class="faq-question" tabindex="0">
+                <h3 class="text-lg font-semibold">How do I get started with your services?</h3>
+                <i class="fas fa-chevron-down icon text-indigo-400 transition-transform duration-300"></i>
+            </div>
+            <p class="faq-answer">Simply visit our <a href="contact.html" class="text-indigo-400 underline">Contact Us</a> page, fill out the form, and our team will reach out to you promptly.</p>
+        </div>
+
+        <!-- FAQ Item 3 -->
+        <div class="faq-item mt-12 bg-light-bg p-4 rounded-lg mb-4 shadow-lg">
+            <div class="faq-question" tabindex="0">
+                <h3 class="text-lg font-semibold">Do you provide custom pricing plans?</h3>
+                <i class="fas fa-chevron-down icon text-indigo-400 transition-transform duration-300"></i>
+            </div>
+            <p class="faq-answer">Yes, we offer custom pricing tailored to your specific project requirements. Contact us for a personalized quote.</p>
+        </div>
+
+        <!-- FAQ Item 4 -->
+        <div class="faq-item mt-12 bg-light-bg p-4 rounded-lg mb-4 shadow-lg">
+            <div class="faq-question" tabindex="0">
+                <h3 class="text-lg font-semibold">What industries do you specialize in?</h3>
+                <i class="fas fa-chevron-down icon text-indigo-400 transition-transform duration-300"></i>
+            </div>
+            <p class="faq-answer">We work with diverse industries including tech startups, healthcare, finance, e-commerce, and more.</p>
+        </div>
+
+        <!-- FAQ Item 5 -->
+        <div class="faq-item mt-12 bg-light-bg p-4 rounded-lg mb-4 shadow-lg">
+            <div class="faq-question" tabindex="0">
+                <h3 class="text-lg font-semibold">How secure are your solutions?</h3>
+                <i class="fas fa-chevron-down icon text-indigo-400 transition-transform duration-300"></i>
+            </div>
+            <p class="faq-answer">Security is our top priority. We follow industry best practices, including encryption, regular security audits, and compliance measures.</p>
+        </div>
+    </section>
+
+    <!-- Call-to-Action Section -->
+    <section class="py-16 text-center bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg mx-auto max-w-3xl shadow-lg">
+        <h2 class="text-3xl font-bold text-white">Still Have Questions?</h2>
+        <p class="text-white mt-4">We’re here to help. Reach out to us anytime for personalized support.</p>
+        <a href="contact.html" class="btn-primary mt-6">Contact Us</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-gray-400 text-center py-6 mt-12">
+        <p>© 2025 FutureVisionMachines | All Rights Reserved</p>
+        <div class="flex justify-center space-x-6 mt-4">
+            <a href="https://www.youtube.com/@FutureVisionMachines" class="social-icon text-3xl hover:text-red-600"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.instagram.com/futurevisionmachines/" class="social-icon text-3xl hover:text-purple-600"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@futurevisionmachines" class="social-icon text-3xl hover:text-pink-600"><i class="fab fa-tiktok"></i></a>
+                <a href="https://x.com/FVMachines" class="social-icon text-3xl hover:text-blue-600"><i class="fab fa-twitter"></i></a>
+                <a href="https://github.com/FutureVisionMachines" class="social-icon text-3xl hover:text-white"><i class="fab fa-github"></i></a>
+        </div>
+    </footer>
+
+    <!-- JavaScript for FAQ Toggle (Accordion Functionality) -->
+    <script>
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+
+            question.addEventListener('click', () => {
+                faqItems.forEach(i => {
+                    if (i !== item) {
+                        i.classList.remove('active');  // Close other items
+                    }
+                });
+                item.classList.toggle('active');  // Toggle current item
+            });
+
+            // Keyboard Accessibility (Enter/Space)
+            question.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    question.click();
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

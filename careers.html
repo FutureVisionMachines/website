@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers | FutureVisionMachines</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #4f46e5;
+            --secondary-color: #8b5cf6;
+            --dark-bg: #111827;
+            --light-bg: #1f2937;
+            --text-light: #e5e7eb;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+        }
+
+        .btn-primary {
+            @apply bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-bold px-6 py-3 rounded-lg shadow-lg hover:scale-105 transition-all duration-300;
+        }
+
+        .nav-link {
+            @apply text-gray-300 hover:text-white transition duration-300;
+        }
+
+        .job-description {
+            display: none;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <nav class="fixed top-0 w-full bg-opacity-90 backdrop-blur-md bg-black shadow-lg py-4 px-8 flex justify-between items-center z-50">
+        <a href="index.html" class="text-2xl font-bold text-white hover:text-secondary transition">FutureVisionMachines</a>
+        <div class="space-x-6 hidden md:flex">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="testimonials.html" class="nav-link">Testimonials</a>
+            <a href="careers.html" class="nav-link text-indigo-400 font-semibold">Careers</a>
+            <a href="pricing.html" class="nav-link">Pricing</a>
+            <a href="faq.html" class="nav-link">FAQ</a>
+            <a href="contact.html" class="btn-primary">Contact Us</a>
+        </div>
+    </nav>
+
+    <section class="relative flex flex-col items-center text-center py-40 px-6">
+        <h1 class="text-6xl font-extrabold text-white drop-shadow-lg leading-tight">
+            Join the <span class="text-indigo-400">FutureVisionMachines</span> Team
+        </h1>
+        <p class="text-lg text-gray-300 mt-4 max-w-xl">Be a part of something innovative. Help us shape the future of technology.</p>
+    </section>
+
+    <section class="py-20 px-6 max-w-5xl mx-auto">
+        <h2 class="text-4xl font-bold text-white text-center mb-12">Current Job Openings</h2>
+        <div id="job-listings">
+            <div class="job-item bg-light-bg p-6 rounded-lg shadow-lg mb-6 cursor-pointer transition hover:bg-indigo-600" onclick="toggleJob(this)">
+                <div class="flex justify-between items-center">
+                    <h3 class="text-2xl font-semibold text-white">Frontend Developer</h3>
+                    <i class="fas fa-chevron-down icon text-indigo-400 transition-transform duration-300"></i>
+                </div>
+                <div class="job-description mt-4 text-gray-300">
+                    <p>We’re looking for a skilled frontend developer with expertise in React and Tailwind CSS.</p>
+                    <ul class="list-disc pl-5 mt-2">
+                        <li>6+ years of experience in frontend development.</li>
+                        <li>Strong understanding of JavaScript, HTML, and CSS.</li>
+                        <li>Experience with modern frameworks like React.</li>
+                    </ul>
+                    <a href="contact.html" class="btn-primary mt-4 inline-block">Apply Now</a>
+                </div>
+            </div>
+            <div class="job-item bg-light-bg p-6 rounded-lg shadow-lg mb-6 cursor-pointer transition hover:bg-indigo-600" onclick="toggleJob(this)">
+                <div class="flex justify-between items-center">
+                    <h3 class="text-2xl font-semibold text-white">JR Backend Developer</h3>
+                    <i class="fas fa-chevron-down icon text-indigo-400 transition-transform duration-300"></i>
+                </div>
+                <div class="job-description mt-4 text-gray-300">
+                    <p>We’re looking for a skilled JR backend developer with expertise in Python and C#</p>
+                    <ul class="list-disc pl-5 mt-2">
+                        <li>3+ years of experience in frontend development.</li>
+                        <li>Strong understanding of Python, C#, and Algorithms.</li>
+                        <li>Experience with modern frameworks like Flask/Django.</li>
+                    </ul>
+                    <a href="contact.html" class="btn-primary mt-4 inline-block">Apply Now</a>
+                </div>
+            </div>
+            <div class="job-item bg-light-bg p-6 rounded-lg shadow-lg mb-6 cursor-pointer transition hover:bg-indigo-600" onclick="toggleJob(this)">
+                <div class="flex justify-between items-center">
+                    <h3 class="text-2xl font-semibold text-white">Marketing Manager</h3>
+                    <i class="fas fa-chevron-down icon text-indigo-400 transition-transform duration-300"></i>
+                </div>
+                <div class="job-description mt-4 text-gray-300">
+                    <p>We’re looking for a skilled Marketing Manager with expertise in Customer Relationship Management</p>
+                    <ul class="list-disc pl-5 mt-2">
+                        <li>6+ years of experience in CRM Software</li>
+                        <li>Strong understanding of SEO</li>
+                        <li>Experience with modern tools like Canva.</li>
+                    </ul>
+                    <a href="contact.html" class="btn-primary mt-4 inline-block">Apply Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-gray-400 text-center py-6 mt-12">
+        <p>© 2025 FutureVisionMachines | All Rights Reserved</p>
+        <div class="flex justify-center space-x-6 mt-4">
+            <a href="https://www.youtube.com/@FutureVisionMachines" class="social-icon text-3xl hover:text-red-600"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.instagram.com/futurevisionmachines/" class="social-icon text-3xl hover:text-purple-600"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@futurevisionmachines" class="social-icon text-3xl hover:text-pink-600"><i class="fab fa-tiktok"></i></a>
+                <a href="https://x.com/FVMachines" class="social-icon text-3xl hover:text-blue-600"><i class="fab fa-twitter"></i></a>
+                <a href="https://github.com/FutureVisionMachines" class="social-icon text-3xl hover:text-white"><i class="fab fa-github"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        function toggleJob(jobElement) {
+            document.querySelectorAll('.job-item').forEach(job => {
+                if (job !== jobElement) {
+                    job.classList.remove('active');
+                    job.querySelector('.job-description').style.display = 'none';
+                    job.querySelector('.icon').classList.remove('rotate-180');
+                }
+            });
+            const description = jobElement.querySelector('.job-description');
+            const icon = jobElement.querySelector('.icon');
+            if (description.style.display === 'block') {
+                description.style.display = 'none';
+                icon.classList.remove('rotate-180');
+            } else {
+                description.style.display = 'block';
+                icon.classList.add('rotate-180');
+            }
+        }
+    </script>
+</body>
+</html>

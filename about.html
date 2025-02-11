@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | FutureVisionMachines</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #4f46e5;
+            --secondary-color: #8b5cf6;
+            --dark-bg: #111827;
+            --light-bg: #1f2937;
+            --text-light: #e5e7eb;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            overflow-x: hidden;
+        }
+
+        .btn-primary {
+            @apply bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-bold px-6 py-3 rounded-lg shadow-lg hover:scale-105 transition-all duration-300;
+        }
+
+        .nav-link {
+            @apply text-gray-300 hover:text-white transition duration-300;
+        }
+
+        .glassmorphism {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            padding: 2rem;
+        }
+
+        /* Fade-in Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(40px);
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full bg-opacity-90 backdrop-blur-md bg-black shadow-lg py-4 px-8 flex justify-between items-center z-50">
+        <a href="index.html" class="text-2xl font-bold text-white hover:text-secondary transition">FutureVisionMachines</a>
+        <div class="space-x-6 hidden md:flex">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link text-indigo-400 font-semibold">About</a>
+            <a href="testimonials.html" class="nav-link">Testimonials</a>
+            <a href="careers.html" class="nav-link">Careers</a>
+            <a href="pricing.html" class="nav-link">Pricing</a>
+            <a href="faq.html" class="nav-link">FAQ</a>
+            <a href="contact.html" class="btn-primary">Contact Us</a>
+        </div>
+        <button id="menu-toggle" class="md:hidden text-white text-2xl">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative flex flex-col items-center text-center py-40 px-6 fade-in">
+        <div class="absolute inset-0 bg-gradient-to-r from-indigo-500 via-purple-600 to-blue-500 opacity-20"></div>
+        <h1 class="text-6xl font-extrabold text-white drop-shadow-lg leading-tight">
+            About <span class="text-indigo-400 fade-in">Future</span><span class="text-purple-400 fade-in">Vision</span><span class="text-yellow-300 Fade-in">Machines</span>
+        </h1>
+        <p class="text-lg text-gray-300 mt-6 max-w-xl">Shaping the future of technology with innovation and expertise.</p>
+    </section>
+
+    <!-- Our Mission -->
+    <section class="py-16 text-center px-6 fade-in">
+        <h2 class="text-4xl font-bold text-indigo-400">Our Mission</h2>
+        <p class="mt-4 max-w-2xl mx-auto text-gray-300 text-lg">
+            At FutureVisionMachines, our mission is to design, develop, and deliver cutting-edge software solutions that empower businesses, entrepreneurs, and individuals to thrive in the digital era. We specialize in SaaS platforms, web & mobile applications, DevOps, and custom software solutions, ensuring that every project we undertake is scalable, efficient, and future-proof.
+
+Our commitment to innovation, quality, and user-centric design drives us to push the boundaries of technology. By leveraging the latest advancements in AI, cloud computing, and automation, we create solutions that streamline workflows, enhance productivity, and drive business growth.
+
+At the core of our philosophy is a dedication to collaboration, transparency, and excellence. We believe that technology should be intuitive, powerful, and accessible—and we strive to transform complex problems into elegant, high-performance solutions that shape the future of industries worldwide.
+        </p>
+    </section>
+
+    <!-- Our Vision -->
+    <section class="py-16 px-6 text-center glassmorphism max-w-4xl mx-auto shadow-lg fade-in">
+        <h2 class="text-4xl font-bold text-purple-400">Our Vision</h2>
+        <p class="mt-4 text-gray-300 text-lg">
+            Our vision is to become a leading force in the Canadian tech industry and beyond, recognized for our ability to redefine digital innovation and transform businesses through software excellence. We aim to be the go-to partner for companies seeking scalable, future-ready technology solutions that drive efficiency and success in an ever-evolving digital landscape.
+
+We envision a world where technology seamlessly integrates with human creativity, enabling organizations to achieve unprecedented levels of automation, efficiency, and digital transformation. Through continuous research, development, and strategic partnerships, we will stay ahead of industry trends, ensuring that our solutions remain at the forefront of technological evolution.
+
+By fostering a culture of learning, growth, and adaptability, FutureVisionMachines will empower developers, entrepreneurs, and enterprises to leverage technology in ways that were once unimaginable—turning bold ideas into reality and shaping a smarter, more connected future.
+        </p>
+    </section>
+
+    <!-- Our Team -->
+    <section class="py-20 px-6 text-center fade-in">
+        <h2 class="text-4xl font-bold text-yellow-300">Meet Our Founder</h2>
+        <div class="mt-10 mx-auto max-w-lg">
+            <img src="assets/founder.jpg" alt="Founder Image" class="rounded-full w-40 h-40 mx-auto shadow-lg border-4 border-indigo-500">
+            <h3 class="text-2xl font-semibold mt-6 text-white">Anthony Tyler-Scott Dinunzio</h3>
+            <p class="text-indigo-400 mt-2">Lead Engineer & Founder</p>
+            <p class="text-gray-300 mt-4 leading-relaxed">
+                With 6+ years of experience, Anthony is dedicated to creating next-gen SaaS platforms, 
+                web and mobile applications, and cloud-based solutions that empower businesses worldwide.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="py-16 text-center bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg mx-auto max-w-3xl shadow-lg fade-in">
+        <h2 class="text-3xl font-bold text-white">Get in Touch</h2>
+        <p class="text-white mt-4">Let’s build something great together. Reach out to us today.</p>
+        <a href="contact.html" class="btn-primary mt-6">Contact Us</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-gray-400 text-center py-6 mt-12">
+        <p>© 2025 FutureVisionMachines | All Rights Reserved</p>
+        <div class="flex justify-center space-x-6 mt-4">
+            <a href="https://www.youtube.com/@FutureVisionMachines" class="social-icon text-3xl hover:text-red-600"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.instagram.com/futurevisionmachines/" class="social-icon text-3xl hover:text-purple-600"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@futurevisionmachines" class="social-icon text-3xl hover:text-pink-600"><i class="fab fa-tiktok"></i></a>
+                <a href="https://x.com/FVMachines" class="social-icon text-3xl hover:text-blue-600"><i class="fab fa-twitter"></i></a>
+                <a href="https://github.com/FutureVisionMachines" class="social-icon text-3xl hover:text-white"><i class="fab fa-github"></i></a>
+        </div>
+    </footer>
+
+    <!-- GSAP Scroll Animations -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            gsap.utils.toArray(".fade-in").forEach((element) => {
+                gsap.to(element, {
+                    opacity: 1,
+                    y: 0,
+                    visibility: "visible",
+                    duration: 1.2,
+                    scrollTrigger: {
+                        trigger: element,
+                        start: "top 85%", // Trigger animation when element is 85% into view
+                        toggleActions: "play none none none"
+                    }
+                });
+            });
+        });
+
+        // Mobile menu toggle
+        document.getElementById("menu-toggle").addEventListener("click", function () {
+            alert("Mobile menu coming soon!"); // Placeholder for future menu logic
+        });
+    </script>
+
+</body>
+</html>
