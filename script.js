@@ -1,12 +1,12 @@
 // Set the launch date (YYYY, MM (0-indexed), DD, HH, MM, SS)
-const launchDate = new Date(2025, 2, 1, 0, 0, 0).getTime();
+const launchDate = new Date(2025, 3, 1, 0, 0, 0).getTime();
 
 function updateCountdown() {
   const now = new Date().getTime();
   const timeLeft = launchDate - now;
 
   if (timeLeft <= 0) {
-    document.querySelector('.countdown').innerHTML = "<h2>We're Live! 🎉</h2>";
+    document.querySelector('.flex.flex-col').innerHTML = "<h2 class='text-3xl font-bold text-teal-400'>We're Live! 🎉</h2>";
     return;
   }
 
