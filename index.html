@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FutureVisionMachines - Coming Soon</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-yH4/2+9YuqT3vZqS68c+7MSdv8uR3KY+4lT+nzh0G+fH3lC2kEQ6LwL6V+CV6zHMB5M3ZzN6vZB+DjU6p9z8Ug==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
   
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous">
+
   <style>
-    /* 🔥 Animated Background */
+    /* 🔥 Background Animation */
     .animated-bg {
       background: linear-gradient(-45deg, #0a0f1f, #001a33, #00264d, #0a0f1f);
       background-size: 400% 400%;
@@ -20,12 +24,14 @@
       100% { background-position: 0% 50%; }
     }
 
-    /* Glassmorphism Effect */
+    /* Glassmorphism Styling */
     .glass {
       background: rgba(255, 255, 255, 0.1);
       backdrop-filter: blur(10px);
       border-radius: 10px;
-      padding: 1rem;
+      padding: 1.5rem;
+      text-align: center;
+      min-width: 80px;
       transition: transform 0.3s ease-in-out;
     }
     .glass:hover {
@@ -34,56 +40,62 @@
   </style>
 </head>
 <body class="relative overflow-hidden text-white">
+
   <!-- Background Animation -->
   <div class="fixed inset-0 animated-bg z-[-1]"></div>
 
-  <div class="flex flex-col items-center justify-center min-h-screen px-4 text-center">
+  <div class="flex flex-col items-center justify-center min-h-screen px-6 text-center space-y-6">
+    
     <!-- Logo -->
-    <img src="logo.png" alt="FutureVisionMachines Logo" class="w-32 md:w-40 mb-6 animate-bounce" />
+    <img src="logo.png" alt="FutureVisionMachines Logo" class="w-32 md:w-40 animate-bounce">
 
     <!-- Main Title -->
-    <h1 class="text-4xl md:text-5xl font-bold uppercase text-teal-400 mb-4 animate-pulse">
+    <h1 class="text-4xl md:text-5xl font-bold uppercase text-teal-400 animate-pulse">
       🚀 We're Launching Soon!
     </h1>
 
-    <p class="text-lg md:text-xl text-gray-300 mb-8">
+    <p class="text-lg md:text-xl text-gray-300 max-w-lg">
       Crafting the future of technology—one innovation at a time. Stay tuned!
     </p>
 
     <!-- Countdown Timer -->
-    <div class="flex flex-wrap justify-center gap-4 mb-8">
-      <div class="glass w-24">
+    <div class="flex flex-wrap justify-center gap-4 mb-6">
+      <div class="glass">
         <span id="months" class="text-3xl font-bold">00</span>
         <small class="block text-sm">Months</small>
       </div>
-      <div class="glass w-24">
+      <div class="glass">
+        <span id="weeks" class="text-3xl font-bold">00</span>
+        <small class="block text-sm">Weeks</small>
+      </div>
+      <div class="glass">
         <span id="days" class="text-3xl font-bold">00</span>
         <small class="block text-sm">Days</small>
       </div>
-      <div class="glass w-24">
+      <div class="glass">
         <span id="hours" class="text-3xl font-bold">00</span>
         <small class="block text-sm">Hours</small>
       </div>
-      <div class="glass w-24">
+      <div class="glass">
         <span id="minutes" class="text-3xl font-bold">00</span>
         <small class="block text-sm">Minutes</small>
       </div>
-      <div class="glass w-24">
+      <div class="glass">
         <span id="seconds" class="text-3xl font-bold">00</span>
         <small class="block text-sm">Seconds</small>
       </div>
     </div>
 
     <!-- Email Subscription Form -->
-    <form id="subscribe-form" class="flex flex-col md:flex-row items-center gap-4 mb-8 w-full max-w-md">
-      <input type="email" id="email" placeholder="Enter your email" required class="w-full p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-400" />
+    <form id="subscribe-form" class="flex flex-col md:flex-row items-center gap-4 w-full max-w-md">
+      <input type="email" id="email" placeholder="Enter your email" required class="w-full p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-400 text-black">
       <button type="submit" class="px-6 py-3 bg-teal-400 text-black font-semibold rounded-md hover:bg-teal-300 transition duration-300">
         Get Notified
       </button>
     </form>
 
     <!-- Social Media Links -->
-    <div class="flex space-x-6">
+    <div class="flex space-x-6 mt-4">
       <a href="https://www.youtube.com/@FutureVisionMachines" target="_blank" class="text-3xl hover:text-red-600 transition">
         <i class="fab fa-youtube"></i>
       </a>
@@ -115,12 +127,14 @@
       }
 
       const months = Math.floor(timeLeft / (1000 * 60 * 60 * 24 * 30));
-      const days = Math.floor((timeLeft % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24));
+      const weeks = Math.floor((timeLeft % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24 * 7));
+      const days = Math.floor((timeLeft % (1000 * 60 * 60 * 24 * 7)) / (1000 * 60 * 60 * 24));
       const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
       document.getElementById("months").innerText = months;
+      document.getElementById("weeks").innerText = weeks;
       document.getElementById("days").innerText = days;
       document.getElementById("hours").innerText = hours;
       document.getElementById("minutes").innerText = minutes;
@@ -135,5 +149,6 @@
       alert("Thank you for subscribing! 🚀");
     });
   </script>
+
 </body>
 </html>
