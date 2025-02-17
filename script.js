@@ -1,4 +1,4 @@
-// Set the launch date (YYYY, MM (0-11), DD, HH, MM, SS)
+// Set the launch date (YYYY, MM (0-indexed), DD, HH, MM, SS)
 const launchDate = new Date(2025, 2, 1, 0, 0, 0).getTime();
 
 function updateCountdown() {
@@ -24,7 +24,7 @@ function updateCountdown() {
 setInterval(updateCountdown, 1000);
 updateCountdown();
 
-// Handle Form Submission
+// Handle Subscription Form Submission
 document.getElementById("subscribe-form").addEventListener("submit", function (event) {
   event.preventDefault();
   alert("Thank you for subscribing! 🚀");
